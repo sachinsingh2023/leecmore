@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Carousel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navbar (unchanged) -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto flex flex-wrap items-center justify-between p-2">
+            <div class="flex items-center ">
+                <img src="./images/logo-h.PNG" alt="Leecmoore Logo" class="h-12 w-42 ">
+            </div>
+            <button id="menu-toggle" class="block lg:hidden text-orange-500 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+            <ul id="menu"
+                class="hidden lg:flex lg:items-center lg:space-x-8 text-gray-700 w-full lg:w-auto lg:mt-0 mt-4">
+                <li><a href="#" class="hover:text-orange-500 text-sm p-0 m-0">About</a></li>
+                <li><a href="#" class="hover:text-orange-500 text-sm p-0 m-0">Manufacturing</a></li>
+                <li class="relative group">
+                    <a href="#" class="hover:text-orange-500 text-sm p-0 m-0 flex items-center">
+                        Products
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </a>
+                    <ul class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg hidden group-hover:block z-10">
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product 1</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product 2</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="hover:text-orange-500 text-sm p-0 m-0">Field Services</a></li>
+                <li><a href="#" class="hover:text-orange-500 text-sm p-0 m-0">Engineering Services</a></li>
+            </ul>
+            <div class="hidden bg-orange-500 text-white lg:flex items-center space-x-4 mt-4 p-1 rounded lg:mt-0">
+                <a href="#" class="">News</a>
+                <a href="#" class="">Contact</a>
+                <a href="#" class="">Careers</a>
+                <a href="#" class=""><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden w-auto lg:hidden flex  bg-gray-800 text-white  p-4">
+            <a href="" class="pl-2">News</a>
+            <a href="" class="pl-2">Contact</a>
+            <a href="" class="pl-2">Careers</a>
+            <a href="" class="pl-2"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+    </nav>
+    <div class="h-12 bg-orange-500 flex justify-center text-white">
+        <div class="flex p-1">
+            <img src="./images/Pages.png" class="h-7 mt-1" alt="">
+            <div class=""><img src="./images/Group 38.png" class="h-4" alt="">
+                <p>ISO-1766</p>
+            </div>
+        </div>
+        <div class="flex p-1">
+            <img src="./images/Pages.png" class="h-7 mt-1" alt="">
+            <div>
+                <p class="text-sm ml-2">4F-0043</p>
+                <p class="text-sm ml-2">8C-0038</p>
+            </div>
+        </div>
+        <div class="">
+            <h1 class="text-white mt-2 ml-8">Global Leaders in Mast and Derrick Design for Every Condition</h1>
+        </div>
+        <div>
+            <img src="./images/drop.png" class="h-10 mt-1 ml-5" alt="">
+        </div>
+    </div>
+
+    <!-- Carousel Container -->
+    <div class="relative w-full overflow-hidden h-[24rem]">
+        <!-- Carousel Item 1 -->
+        <div class="carousel-item active relative">
+            <img src="./images/crouse1.png" class=" crouse-img w-full h-auto" alt="Image 1">
+            <div class="absolute top-5 left-10 text-white space-y-4 w-full h-full">
+                <div class="flex "> <img src="./images/logo.png" class="crouse-logo" alt="">
+                    <h1 class="text-5xl mt-8 "
+                        style="font-size:Josefin Sans ; text-transform: capitalize; font-weight: 100;">over</h1>
+                </div>
+
+                <h1 class="text-4xl ml-20" style="font-family: Josefin Sans; font-weight: 800;">115 yars of Innovation
+                </h1>
+                <div class="ml-10">
+                    <p class="text-lg " style="width: 700px;  ">Since 1907, Lee C. Moore has been at the forefront of
+                        drilling structure design and manufacturing, setting industry standards</p>
+                    <a href="#" class="bg-orange-500 text-white px-6 py-2  rounded hover:bg-orange-600"
+                        style="position: relative; top: 30px;">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Item 2 -->
+        <div class="carousel-item relative">
+            <img src="./images//crouse2.png" class=" crouse-img w-full h-auto" alt="Image 2">
+            <div class="absolute top-5 left-10 text-white space-y-4 w-full h-full">
+                <div class="flex "> <img src="./images/logo.png" class="crouse-logo" alt="">
+                    <h1 class="text-5xl mt-8 "
+                        style="font-size:Josefin Sans ; text-transform: capitalize; font-weight: 100;">Reliable and</h1>
+                </div>
+
+                <h1 class="text-4xl ml-20" style="font-family: Josefin Sans; font-weight: 800;"> Efficient Solutions
+                </h1>
+                <div class="ml-10">
+                    <p class="text-lg " style="width: 700px;  ">Trusted by major drilling companies worldwide, we
+                        deliver robust masts and derricks for every condition—offshore and onshore.</p>
+                    <a href="#" class="bg-orange-500 text-white px-6 py-2  rounded hover:bg-orange-600"
+                        style="position: relative; top: 30px;">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Item 3 -->
+        <div class="carousel-item relative">
+            <img src="./images//crouse3.png" class=" crouse-img w-full h-auto" alt="Image 3">
+            <div class="absolute top-5 left-10 text-white space-y-4 w-full h-full">
+                <div class="flex "> <img src="./images/logo.png" class="crouse-logo" alt="">
+                    <h1 class="text-5xl mt-8 "
+                        style="font-size:Josefin Sans ; text-transform: capitalize; font-weight: 100;">Rig</h1>
+                </div>
+
+                <h1 class="text-4xl ml-20" style="font-family: Josefin Sans; font-weight: 800;">Refurbishment Expertise
+                </h1>
+                <div class="ml-10">
+                    <p class="text-lg " style="width: 700px;  ">API-Certified refurbishment with a rigorous nine-stage
+                        process, ensuring your rig's safety, structural integrity, and extended operational life.</p>
+                    <a href="#" class="bg-orange-500 text-white px-6 py-2  rounded hover:bg-orange-600"
+                        style="position: relative; top: 30px;">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Indicators (Dots) -->
+        <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4 flex space-x-2">
+            <span class="indicator w-3 h-3 bg-gray-400 rounded-full" onclick="showSlide(0)"></span>
+            <span class="indicator w-3 h-3 bg-gray-400 rounded-full" onclick="showSlide(1)"></span>
+            <span class="indicator w-3 h-3 bg-gray-400 rounded-full" onclick="showSlide(2)"></span>
+        </div>
+    </div>
+    <!--WHAT WE BUILD  -->
+    <h1 class="text-4xl text-orange-500 container capitalize "
+        style="font-family: sans-serif; font-weight: 700; text-decoration: underline; padding-left: 12rem; margin-top: 2rem;">
+        what we build</h1>
+    <div class="card-container text-white">
+        <div class="card flex justify-center flex-col items-center " style="background-image: url(./images/card1.png);">
+            <h2 class="text-4xl text-white  ">Offshore Drilling Structure</h2>
+            <button style="border-bottom: 2px solid white; padding: 3px">Know More</button>
+        </div>
+        <div class="card flex justify-center flex-col items-center " style="background-image: url(./images/card2.png);">
+            <h2 class="text-4xl text-white ">Land Drilling Structure</h2>
+            <button style="border-bottom: 2px solid white; padding: 3px">Know More</button>
+        </div>
+        <div class="card flex justify-center flex-col items-center " style="background-image: url(./images/card3.png);">
+            <h2 class="text-4xl text-white ">Rig Accessories and Equipment</h2>
+            <button style="border-bottom: 2px solid white; padding: 3px">Know More</button>
+        </div>
+    </div>
+    <div class="text-center flex flex-col justify-center items-center"
+        style="height: 25rem; background-image: url(./images/indusry-p.png); background-size: cover;">
+        <h1 class="text-3xl text-orange-500"> Industry Pioneers</h1>
+        <p class="text-2xl mt-10">In 1938, we revolutionized the petroleum industry by designing and building <span
+                class="font-extrabold">the first cantilever mast</span>. Over <span class="font-extrabold">4,000 masts
+                and 700 offshore derricks</span> later, we continue to lead.</p>
+
+    </div>
+    <div class="">
+        <h1 class="text-4xl text-orange-500 container capitalize "
+            style="font-family: sans-serif; font-weight: 700; text-decoration: underline; text-align: center; margin-top: 2rem;">
+            Field and Engineering Service</h1>
+        <div class="card-container text-white">
+            <div class="card flex justify-end flex-col items-center "
+                style="background-image: url(./images/faes1.png);">
+                <h2 class="text-4xl text-white  ">Adoption</h2>
+                <p>Restoring Any Rig to Original Standards, Ensuring API Compliance – Certified Land Rig
+                    Excellence by Lee C. Moore</p>
+                <button style="border-bottom: 2px solid white; padding: 3px">Know More</button>
+            </div>
+            <div class="card flex justify-end flex-col items-center "
+                style="background-image: url(./images/faes2.png);">
+                <h2 class="text-4xl text-white ">Endorsement</h2>
+                <p>Engineered Confidence – Full Capacity and Upgrades, Endorsed by Lee C. Moore</p>
+                <button style="border-bottom: 2px solid white; padding: 3px">Know More</button>
+            </div>
+            <div class="card flex justify-end flex-col items-center "
+                style="background-image: url(./images/faes3.png);">
+                <h2 class="text-4xl text-white ">Recertification</h2>
+                <p>Lee C. Moore: Recertifying All Makes and Models – Ensuring API Compliance and Safe
+                    Operations Worldwide</p>
+                <button style="border-bottom: 2px solid white; padding: 3px">Know More</button>
+            </div>
+        </div>
+    </div>
+    <div style=" background-image: url(./images/ces.png); background-size: auto;  background-repeat: no-repeat;">
+        <div class="text-center flex flex-col justify-center items-center" style="height: 25rem;">
+            <h1 class="text-3xl text-orange-500">Cost-Effective Solutions</h1>
+            <p class="text-2xl mt-10">Worldwide, <span class="font-extrabold">API Category 4 refurbishment</span>offers
+                a faster, more affordable alternative to new builds—maximizing value while meeting <span
+                    class="font-extrabold">API 4G standards.</span></p>
+
+        </div>
+        <div class="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"
+            data-aos="fade-right" data-aos-duration="800">
+            <div class="pr-2 md:mb-14 py-14 md:py-0">
+                <h1 class="text-3xl font-semibold text-orange-500 xl:text-5xl lg:text-3xl"><span
+                        class="block w-full">Discover Opportunities</h1>
+                <p class="py-4 text-lg text-gray-500 2xl:py-8 md:py-6 2xl:pr-5">
+                    Join our dynamic team at Lee C. Moore and become an integral part of driving innovation in the
+                    drilling industry. We actively seek skilled service technicians who are dedicated to providing
+                    exceptional field support, offering you an exciting opportunity to make a significant impact and
+                    shape the future of drilling.
+                </p>
+                <div class="mt-4">
+                    <a href="#contact" class="px-5 py-3 text-lg tracking-wider   rounded-lg md:px-8 "
+                        style="border-bottom: 2px solid orange;"><span>CAREERS</span> </a>
+                </div>
+            </div>
+
+            <div class="pb-10 overflow-hidden md:p-10 lg:p-0 sm:pb-0">
+                <img id="heroImg1"
+                    class="transition-all duration-300 ease-in-out hover:scale-105 lg:w-full sm:mx-auto sm:w-4/6 sm:pb-12 lg:pb-0"
+                    src="./images/ces2.png" alt="Awesome hero page image" width="500" height="488" />
+            </div>
+        </div>
+        <div class="Trustedby bg-orange-500 text-white " style="min-height: 12rem;">
+            <h1 class="text-center text-2xl pt-5">Trusted by</h1>
+            <p class="text-center" style="
+    font-size: 18px;
+    font-family: Josefin Sans;
+    font-style: italic;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 20px;
+    word-wrap: break-word">the World's Major Drilling Companies Onshore and Offshore</p>
+            <div class="flex flex-wrap justify-center">
+                <img class="p-1" style="height: 10rem; width: 10rem;" src="./images/trusted-removebg-preview.png"
+                    alt="">
+                <img class="p-1" style="height: 10rem; width: 10rem;" src="./images/trusted2-removebg-preview.png"
+                    alt=""><img class="p-1"style="height: 10rem; width: 10rem;" 
+                    src="./images/trusted3-removebg-preview.png"
+                    alt=""><img class="p-1" style="height: 10rem; width: 10rem;" src="./images/trusted4-removebg-preview.png"
+                    alt="">
+            </div>
+        </div>
+        <footer class="bg-[#241107] text-white py-6">
+            <div class="container mx-auto px-6">
+                <div
+                    class="flex flex-col lg:flex-row justify-between items-center lg:items-start space-y-8 lg:space-y-0">
+                    <!-- Logo and Company Tagline -->
+                    <div class="flex flex-col items-center lg:items-start space-y-2">
+                        <img src="./images/footer-l.png" alt="LeecMoore Logo" style="height: 6%;">
+                    </div>
+
+                    <!-- Links Section -->
+                    <div
+                        class="flex flex-col md:flex-row text-center lg:text-left space-y-6 lg:space-y-0 lg:space-x-16">
+                        <!-- First Column -->
+                        <div>
+                            <ul class="space-y-2">
+                                <li><a href="#" class="hover:underline">> About</a></li>
+                                <li><a href="#" class="hover:underline">> Manufacturing</a></li>
+                                <li><a href="#" class="hover:underline">> Products</a></li>
+                                <li><a href="#" class="hover:underline">> Field Services</a></li>
+                                <li><a href="#" class="hover:underline">> Engineering Services</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Second Column -->
+                        <div>
+                            <ul class="space-y-2">
+                                <li><a href="#" class="hover:underline">> Careers</a></li>
+                                <li><a href="#" class="hover:underline">> News</a></li>
+                                <li><a href="#" class="hover:underline">> Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Certifications and Connect -->
+                    <div class="flex flex-col items-center lg:items-end space-y-2">
+                        <div class="flex flex-col space-x-4">
+                            <div class="flex p-1 ml-3">
+                                <img src="./images/Pages.png" class="h-7 mt-1" alt="">
+                                <div class=""><img src="./images/Group 38.png" class="h-4" alt="">
+                                    <p>ISO-1766</p>
+                                </div>
+                            </div>
+                            <div class="flex p-1">
+                                <img src="./images/Pages.png" class="h-7 mt-1" alt="">
+                                <div>
+                                    <p class="text-sm ml-2">4F-0043</p>
+                                    <p class="text-sm ml-2">8C-0038</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#"
+                            class="bg-orange-500 text-white py-2 px-4 rounded-full hover:bg-orange-600 transition">Connect
+                            with us</a>
+                    </div>
+                </div>
+
+                <!-- Separator -->
+                <div class="border-t border-gray-700 my-6"></div>
+
+                <!-- Footer Bottom: Terms and Copyright -->
+                <div
+                    class="flex flex-col lg:flex-row justify-between items-center text-center lg:text-left space-y-4 lg:space-y-0">
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:underline">Cookie policy</a>
+                        <a href="#" class="text-gray-400 hover:underline">Terms & conditions</a>
+                        <a href="#" class="text-gray-400 hover:underline">Site map</a>
+                    </div>
+                    <p class="text-gray-400 text-sm">© Sachin singh. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="./javascript.js">
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+        const indicators = document.querySelectorAll('.indicator');
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('bg-gray-800'));
+
+            currentSlide = index;
+            slides[index].classList.add('active');
+            indicators[index].classList.add('bg-gray-800');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Auto-play the carousel
+        setInterval(nextSlide, 3000); // Change every 3 seconds
+    </script>
+
+</body>
+
+</html>
